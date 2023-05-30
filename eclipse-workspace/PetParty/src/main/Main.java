@@ -18,6 +18,6 @@ public class Main {
 		gamePanel.setupGame();
 		gamePanel.startGameThread();
 		
-		//git comment
+		
 	}
 }
