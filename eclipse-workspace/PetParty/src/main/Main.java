@@ -18,6 +18,7 @@ public class Main {
 		gamePanel.setupGame();
 		gamePanel.startGameThread();
 		
-		
+
+		//completely new comment
 	}
 }
