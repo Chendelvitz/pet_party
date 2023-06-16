@@ -368,6 +368,48 @@ public class UI {
 			g2.drawString(text,x,y);
 			g2.drawImage(gp.possum.right1,x-gp.tileSize,y-gp.tileSize,gp.tileSize,gp.tileSize,null);
 		}
+		else if (titleScreenState==3) {
+			//TITLE NAME
+			Color borderColor1=new Color(227,176,1);
+			Color borderColor2=new Color(120,99,3);
+			BasicStroke newStroke1=new BasicStroke(35);
+			BasicStroke newStroke2=new BasicStroke(3);
+			BasicStroke newStroke3=new BasicStroke(5);
+			g2.setColor(new Color(70,70,200));
+			g2.fillRect(0, 0, gp.screenWidth, gp.screenHeight);
+			g2.setColor(borderColor1);
+			g2.setStroke(newStroke1);
+			g2.drawLine(0,15,gp.screenWidth,15);
+			g2.drawLine(gp.screenWidth-15,0,gp.screenWidth-15,gp.screenHeight);
+			g2.drawLine(0,gp.screenHeight-15,gp.screenWidth,gp.screenHeight-15);
+			g2.drawLine(15,0,15,gp.screenHeight);
+			g2.setColor(borderColor2);
+			g2.setStroke(newStroke3);
+			g2.drawLine(30,30,gp.screenWidth-30,30);
+			g2.drawLine(gp.screenWidth-30,30,gp.screenWidth-30,gp.screenHeight-30);
+			g2.drawLine(gp.screenWidth-30,gp.screenHeight-30,30,gp.screenHeight-30);
+			g2.drawLine(30,30,30,gp.screenHeight-30);
+			g2.setFont(dialog_48);
+			String text="SETTINGS";
+			int x=getCenteredTextX(text);
+			int y=gp.tileSize*2;
+
+			//SHADOW
+			g2.setColor(Color.black);
+			g2.drawString(text,x+3,y+3);
+			//MAIN COLOR
+			g2.setColor(new Color(227,176,1));
+			g2.drawString(text,x,y);
+			
+			text="BACK";
+			x=getCenteredTextX(text);
+			y=gp.tileSize*10;
+			g2.setColor(Color.black);
+			g2.drawString(text,x+3,y+3);
+			g2.setColor(new Color(227,176,1));
+			g2.drawString(text,x,y);
+			g2.drawImage(gp.possum.right1,x-gp.tileSize,y-gp.tileSize,gp.tileSize,gp.tileSize,null);
+		}
 	}
 	public void drawPauseScreen() {
 		g2.setFont(arial_80);

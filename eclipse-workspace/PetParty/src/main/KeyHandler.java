@@ -43,7 +43,7 @@ public class KeyHandler implements KeyListener{
 						//add later
 					}
 					if(gp.ui.commandNum==2) {
-						//add later
+						gp.ui.titleScreenState=3;
 					}
 					if(gp.ui.commandNum==3) {
 						gp.ui.titleScreenState=2;
@@ -88,6 +88,11 @@ public class KeyHandler implements KeyListener{
 				}
 			}
 			else if(gp.ui.titleScreenState==2) {
+				if(code==KeyEvent.VK_SPACE) {
+					gp.ui.titleScreenState=0;
+				}
+			}
+			else if(gp.ui.titleScreenState==3) {
 				if(code==KeyEvent.VK_SPACE) {
 					gp.ui.titleScreenState=0;
 				}
