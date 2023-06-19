@@ -74,6 +74,7 @@ public class KeyHandler implements KeyListener{
 					}
 					if(gp.ui.commandNum==1) {
 						//thief ability
+						gp.player.speed=5;
 						gp.gameState=gp.playState;
 						gp.playMusic(0);
 					}
